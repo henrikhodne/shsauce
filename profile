@@ -23,3 +23,10 @@ if test -d $HOME/.profile.d && ls "$HOME/.profile.d" | egrep -q '.'; then
     done
     unset profile
 fi
+
+if test -d $HOME/.configs; then
+    for profile in $HOME/.configs/*/profile.sh; do
+        test -r "$profile" && source "$profile"
+    done
+    unset profile
+fi
