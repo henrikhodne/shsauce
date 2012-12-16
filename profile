@@ -3,7 +3,7 @@ umask 022
 export EDITOR=vim
 set -o vi
 
-[ "$TERM" = "xterm" ] && export TERM="xterm-256color"
+[ "$TERM" = "xterm" ] || [ "$TERM" = "screen" ] && export TERM="$TERM-256color"
 TERM=$(echo $TERM|cut -d- -f 1-2)
 
 #bin folders
