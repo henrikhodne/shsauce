@@ -1,7 +1,7 @@
 # vim: filetype=sh
 source /etc/profile
 source ~/.profile
-DEFAULT_USER="$(stat -c %U $(readlink "$HOME/.shrc"))"
+[ -z "$DEFAULT_USER " ] || export DEFAULT_USER="$(stat -c %U $(readlink "$HOME/.shrc"))"
 
 if [ "$(tty)" = "/dev/tty7" ]; then exec startx; fi
 
