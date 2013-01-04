@@ -17,6 +17,9 @@ PATH="$HOME/android-sdk-linux/platform-tools:$HOME/android-sdk-linux/tools:$PATH
 #ARM dev stuff
 PATH="$HOME/sat/bin:$PATH"
 
+#nave
+PATH="$NAVEPATH:$PATH"
+
 if test -d $HOME/.profile.d && ls "$HOME/.profile.d" | egrep -q '.'; then
     for profile in $HOME/.profile.d/*; do
         test -r "$profile" && source "$profile"
