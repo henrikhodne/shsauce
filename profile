@@ -1,5 +1,7 @@
 # vim: filetype=sh
 umask 022
+ulimit -n unlimited
+
 export EDITOR=vim
 set -o vi
 
