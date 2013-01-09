@@ -1,6 +1,6 @@
 # vim: filetype=sh
 umask 022
-ulimit -n unlimited
+ulimit -n unlimited 2> /dev/null
 
 export EDITOR=vim
 set -o vi
