@@ -1,5 +1,6 @@
 source ~/.shrc
 [ -z "$PS1" ] && return
+source "$HOME/.shalias"
 
 HISTCONTROL=ignoredups:ignorespace
 shopt -s histappend
@@ -17,10 +18,6 @@ xterm*|rxvt*)
 *)
     ;;
 esac
-
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
 
 # {{{
 # Node Completion - Auto-generated, do not touch.

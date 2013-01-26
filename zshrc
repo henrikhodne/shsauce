@@ -28,3 +28,5 @@ done
 unset cur
 
 source $ZSH/oh-my-zsh.sh
+
+source "$HOME/.shalias"
