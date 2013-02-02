@@ -10,6 +10,7 @@ ZSH_THEME=agnoster
 # DISABLE_AUTO_TITLE="true"
 
 COMPLETION_WAITING_DOTS=true
+setopt HIST_IGNORE_SPACE
 
 plugins=(gnu-utils)
 
@@ -22,7 +23,7 @@ commandplugin() {
 }
 
 commandplugin pacman archlinux
-for cur in command-not-found ssh-agent systemd screen redis-cli git node npm; do
+for cur in command-not-found ssh-agent systemd screen redis-cli git node npm go; do
     commandplugin $cur
 done
 unset cur
