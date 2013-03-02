@@ -23,6 +23,8 @@ for cur in command-not-found ssh-agent systemd screen redis-cli git node npm go;
 done
 unset cur
 
+alias sudo='nocorrect sudo'
+
 source $ZSH/oh-my-zsh.sh
 
 source "$HOME/.shalias"
