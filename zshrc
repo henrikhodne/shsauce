@@ -18,7 +18,7 @@ commandplugin() {
 }
 
 commandplugin pacman archlinux
-for cur in command-not-found ssh-agent systemd screen redis-cli git node npm go; do
+for cur in command-not-found ssh-agent systemd screen redis-cli git node npm go pass; do
     commandplugin $cur
 done
 unset cur
