@@ -13,4 +13,5 @@ ln -svf "$pluginpath/logout" "$HOME/.zlogout"
 if ! [ -d "$HOME/.oh-my-zsh" ] && [ "zsh" = "$(basename "$SHELL")" ]; then
     rm -rf "$HOME/.oh-my-zsh"
     git clone https://github.com/nathan7/oh-my-zsh.git "$HOME/.oh-my-zsh"
+    (cd "$HOME/.oh-my-zsh" && git config --bool pull.rebase true)
 fi
