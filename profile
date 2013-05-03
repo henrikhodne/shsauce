@@ -18,6 +18,9 @@ PATH="$HOME/.cabal/bin:$PATH"
 PATH="$HOME/android-sdk-linux/platform-tools:$HOME/android-sdk-linux/tools:$PATH"
 #ARM dev stuff
 PATH="$HOME/sat/bin:$PATH"
+#go stuff
+GOPATH="$HOME/go"
+PATH="$HOME/go/bin:$PATH"
 #ruby gems
 command -v ruby > /dev/null 2> /dev/null && PATH="$(ruby -rubygems -e "puts Gem.user_dir")/bin:$PATH"
 
