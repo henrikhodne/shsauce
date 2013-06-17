@@ -10,10 +10,3 @@ mkdir -pv "$HOME/.profile.d"
 ln -svf "$pluginpath/logout" "$HOME/.bash_logout"
 ln -svf "$pluginpath/logout" "$HOME/.zlogout"
 
-if [ "zsh" = "$(basename "$SHELL")" ]; then
-  if ! [ -d "$HOME/.oh-my-zsh" ]; then
-      rm -rf "$HOME/.oh-my-zsh"
-      git clone https://github.com/nathan7/oh-my-zsh.git "$HOME/.oh-my-zsh"
-  fi
-  (cd "$HOME/.oh-my-zsh" && git config --bool pull.rebase true)
-fi
