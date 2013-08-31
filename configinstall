@@ -3,7 +3,6 @@ pluginpath="$(dirname "$(readlink -f $0)")"
 ln -svf "$pluginpath/shrc" "$HOME/.shrc"
 ln -svf "$pluginpath/shalias" "$HOME/.shalias"
 ln -svf "$pluginpath/zshrc" "$HOME/.zshrc"
-ln -svf "$pluginpath/zlogin" "$HOME/.zlogin"
 ln -svf "$pluginpath/bashrc" "$HOME/.bashrc"
 ln -svf "$pluginpath/profile" "$HOME/.profile"
 mkdir -pv "$HOME/.profile.d"
@@ -11,3 +10,10 @@ mkdir -pv "$HOME/.profile.d"
 ln -svf "$pluginpath/logout" "$HOME/.bash_logout"
 ln -svf "$pluginpath/logout" "$HOME/.zlogout"
 
+if [ "zsh" = "$(basename "$SHELL")" ]; then
+  if ! [ -d "$HOME/.spaghetti" ]; then
+    rm -rf "$HOME/.spaghetti"
+    git clone https://github.com/henrikhodne/spaghetti.git "$HOME/.spaghetti"
+  fi
+  (cd "$HOME/.spaghetti" && git config --bool pull.rebase true)
+fi
