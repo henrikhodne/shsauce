@@ -8,6 +8,10 @@ set -o vi
 [ "$TERM" = "xterm" ] || [ "$TERM" = "screen" ] && export TERM="$TERM-256color"
 TERM=$(echo $TERM|cut -d- -f 1-2)
 
+if test -d /usr/share/chruby; then
+    source /usr/share/chruby/chruby.sh
+fi
+
 #bin folders
 PATH="$HOME/.binlocal:$HOME/.bin:$PATH"
 #npm
